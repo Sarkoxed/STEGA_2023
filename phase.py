@@ -89,6 +89,7 @@ def put(inpname, outname, M, chan=0):
         new_data = np.array([part1, new_S], dtype=np.int16).T
 
     wavfile.write(outname, fd, new_data)
+    print("Успешно сокрыли сообщение.")
     return K
 
 
@@ -119,4 +120,6 @@ fileout = "stegged/time.wav"
 msg = b"New album, huh?"
 
 K = put(filein, fileout, msg)
+print()
+print(f"Начинаем восстановление сообщения из файла: {fileout}")
 print(f"Восстановленное сообщение: {extract(fileout, K)}")
