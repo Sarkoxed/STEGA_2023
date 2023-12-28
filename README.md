@@ -1,6 +1,6 @@
-./prep.sh
-python -m pip install -r requirements.txt
-python phase.py
+- ./prep.sh
+- python -m pip install -r requirements.txt
+- python phase.py
 
 ---
 
