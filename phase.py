@@ -90,6 +90,14 @@ def put(inpname, outname, M, chan=0):
 
     wavfile.write(outname, fd, new_data)
     print("Успешно сокрыли сообщение.")
+    plt.plot(data.T[0])
+    plt.gcf().set_size_inches(20, 6)
+    plt.savefig("signal_before.png")
+    plt.clf()
+
+    plt.plot(new_data.T[0])
+    plt.gcf().set_size_inches(20, 6)
+    plt.savefig("signal_after.png")
     return K
 
 
